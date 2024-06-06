@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('deskripsi')->nullable();
             $table->timestamps();
 
-            $table->foreign('id_kategori')->references('id')->on('kategoris')->onDelete('cascade'); 
+            $table->foreign('id_kategori')->references('id_kategori')->on('kategoris')->onDelete('cascade'); 
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('menus');
+        Schema::dropIfExists('menu');
     }
 };

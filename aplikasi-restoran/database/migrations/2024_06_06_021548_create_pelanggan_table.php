@@ -11,11 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('statuses', function (Blueprint $table) {
-            $table->id('id_status');
-            $table->string('nama_status');
+        Schema::create('pelanggans', function (Blueprint $table) {
+            $table->id('id_pelanggan');
+            $table->string('nama');
+            $table->string('email')->nullable();
+            $table->string('no_telepon')->nullable();
+            $table->text('alamat')->nullable(); 
             $table->timestamps();
         });
+
     }
 
     /**
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('statuses');
+        Schema::dropIfExists('pelanggan');
     }
 };

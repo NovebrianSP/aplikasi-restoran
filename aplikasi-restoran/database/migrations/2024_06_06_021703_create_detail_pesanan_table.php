@@ -17,8 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('id_pelanggan');
             $table->timestamps();
 
-            $table->foreign('id_menu')->references('id')->on('menus');
-            $table->foreign('id_pelanggan')->references('id')->on('pelanggans');
+            $table->foreign('id_menu')->references('id_menu')->on('menus');
+            $table->foreign('id_pelanggan')->references('id_pelanggan')->on('pelanggans');
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('detail_pesanans');
+        Schema::dropIfExists('detail_pesanan');
     }
 };
