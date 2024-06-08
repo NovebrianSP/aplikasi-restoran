@@ -17,7 +17,8 @@ class ChefFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama_chef' => fake()->word(),
+            'kontak_chef' => fake()->randomDigit(13)
         ];
     }
 }

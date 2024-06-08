@@ -17,7 +17,8 @@ class KasirFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama_kasir' => fake()->word(),
+            'kontak_kasir' => fake()->randomDigit(13)
         ];
     }
 }

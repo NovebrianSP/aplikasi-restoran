@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\LandingPage;
+use App\Models\Promo;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home', ['title'=>'Home']);
-});
+Route::get('/', [LandingPage::class, 'index']);

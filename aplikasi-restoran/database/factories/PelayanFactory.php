@@ -17,7 +17,8 @@ class PelayanFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama_pelayan' => fake()->word(),
+            'kontak_pelayan' => fake()->randomDigit(13)
         ];
     }
 }

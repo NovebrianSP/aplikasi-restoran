@@ -17,7 +17,8 @@ class RestoranFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama_resto' => fake()->word(),
+            'alamat' => fake()->sentence()
         ];
     }
 }

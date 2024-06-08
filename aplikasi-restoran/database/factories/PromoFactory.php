@@ -3,11 +3,12 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Menu;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\status>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\promo>
  */
-class StatusFactory extends Factory
+class PromoFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +18,8 @@ class StatusFactory extends Factory
     public function definition(): array
     {
         return [
-            'nama_status' => 'ready'
+            'id_menu' => Menu::factory(),
+            'expired' => fake()->dateTime()
         ];
     }
 }

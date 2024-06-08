@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Menu;
+use App\Models\Pelanggan;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,8 @@ class DetailPesananFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'id_menu' => Menu::factory(),
+            'id_pelanggan' => Pelanggan::factory()
         ];
     }
 }
