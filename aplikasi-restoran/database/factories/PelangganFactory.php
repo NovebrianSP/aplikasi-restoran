@@ -17,11 +17,11 @@ class PelangganFactory extends Factory
     public function definition(): array
     {
         return [
-            'nama' => fake()->words(3),
+            'nama' => fake()->words(3, true),
             'email' => fake()->unique()->safeEmail(),
-            'no_telepon' => fake()->randomDigit(13),
-            'password' => fake()->word(),
-            'alamat' => fake()->sentences()
+            'no_telepon' => fake()->phoneNumber(),
+            'password' => bcrypt(fake()->password()),
+            'alamat' => fake()->address()
         ];
     }
 }

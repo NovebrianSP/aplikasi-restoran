@@ -15,4 +15,9 @@ class Pelayan extends Model
         'nama_pelayan',
         'kontak_pelayan',
     ];
+
+    public function pesanans()
+    {
+        return $this->hasMany(Pesanan::class,'id_pelayan');
+    }
 }

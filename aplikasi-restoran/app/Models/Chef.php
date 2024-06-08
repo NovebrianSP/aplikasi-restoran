@@ -15,4 +15,9 @@ class Chef extends Model
         'nama_chef',
         'kontak_chef',
     ];
+
+    public function pesanans()
+    {
+        return $this->hasMany(Pesanan::class, 'id_chef');
+    }
 }

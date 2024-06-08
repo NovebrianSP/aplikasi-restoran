@@ -15,4 +15,9 @@ class Kasir extends Model
         'nama_kasir',
         'kontak_kasir',
     ];
+
+    public function pesanans()
+    {
+        return $this->hasMany(Pesanan::class,'id_kasir');
+    }
 }

@@ -7,7 +7,7 @@ use App\Models\Pelanggan;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Detail_pesanan>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\DetailPesanan>
  */
 class DetailPesananFactory extends Factory
 {

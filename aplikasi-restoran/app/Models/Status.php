@@ -14,4 +14,9 @@ class status extends Model
     protected $fillable = [
         'nama_status'
     ];
+
+    public function pesanans()
+    {
+        return $this->hasMany(Pesanan::class,'id_status');
+    }
 }

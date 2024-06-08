@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Detail_pesanan extends Model
+class DetailPesanan extends Model
 {
     use HasFactory;
-
-    protected $table = 'details';
     protected $primaryKey = 'id_detail';
-    protected $fillable = ['id_menu', 'id_pelanggan']; 
+    protected $fillable = ['id_menu', 'id_pelanggan'];
 
     public function menu()
     {
@@ -21,5 +19,10 @@ class Detail_pesanan extends Model
     public function pelanggan()
     {
         return $this->belongsTo(Pelanggan::class, 'id_pelanggan');
+    }
+
+    public function pesanans()
+    {
+        return $this->hasMany(Pesanan::class, 'id_detail');
     }
 }

@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Pelanggan;
+use App\Models\Pesanan;
 use App\Models\Promo;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,6 +15,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Promo::factory()->count(10)->create();
+        Pesanan::factory()->count(10)->create();
     }
 }

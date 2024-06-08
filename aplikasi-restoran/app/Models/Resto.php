@@ -5,12 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Restoran extends Model
+class Resto extends Model
 {
     use HasFactory;
-
+    use HasFactory;
+    protected $primaryKey = 'id_resto';
     protected $fillable = [
         'nama_resto',
         'alamat'
     ];
+
+    public function pesanans()
+    {
+        return $this->hasMany(Pesanan::class, 'id_resto');
+    }
 }

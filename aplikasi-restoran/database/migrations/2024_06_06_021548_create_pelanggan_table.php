@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('pelanggans', function (Blueprint $table) {
             $table->id('id_pelanggan');
             $table->string('nama');
-            $table->string('email')->nullable();
+            $table->string('email')->nullable()->unique();
             $table->string('no_telepon')->nullable();
             $table->string('password')->nullable();
             $table->text('alamat')->nullable(); 

@@ -15,4 +15,9 @@ class Promo extends Model
     {
         return $this->belongsTo(Menu::class, 'id_menu');
     }
+
+    public function pesanans()
+    {
+        return $this->hasMany(Pesanan::class,'id_promo');
+    }
 }
