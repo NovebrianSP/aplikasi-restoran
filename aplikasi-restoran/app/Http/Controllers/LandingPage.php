@@ -8,7 +8,7 @@ use App\Models\Promo;
 class LandingPage extends Controller
 {
    function index(Promo $promo) {
-    $promo = Promo::with('menus')->where('id_promo', 1)->first();
-    return view('landingPage', ['title'=>'Home', 'promo'=>$promo]);
+    $promos = Promo::with('menus')->get();
+    return view('landingPage', ['title'=>'Home', 'promos'=>$promos]);
    }
 }
