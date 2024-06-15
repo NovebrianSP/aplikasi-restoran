@@ -14,6 +14,7 @@ class Pelayan extends Model
     protected $fillable = [
         'nama_pelayan',
         'kontak_pelayan',
+        'gambar'
     ];
 
     public function pesanans()

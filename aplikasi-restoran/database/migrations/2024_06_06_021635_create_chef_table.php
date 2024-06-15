@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('id_chef');
             $table->string('nama_chef');
             $table->string('kontak_chef');
+            $table->text('gambar')->nullable();
             $table->timestamps();
         });
     }

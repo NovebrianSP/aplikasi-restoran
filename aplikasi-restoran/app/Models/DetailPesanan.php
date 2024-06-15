@@ -9,7 +9,7 @@ class DetailPesanan extends Model
 {
     use HasFactory;
     protected $primaryKey = 'id_detail';
-    protected $fillable = ['id_menu', 'id_pelanggan'];
+    protected $fillable = ['id_menu', 'id_pelanggan','jumlah'];
 
     public function menu()
     {

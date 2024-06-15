@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nama_menu');
             $table->decimal('harga_menu', 10, 2);
             $table->text('deskripsi')->nullable();
+            $table->text('gambar')->nullable();
             $table->timestamps();
 
             $table->foreign('id_kategori')->references('id_kategori')->on('kategoris')->onDelete('cascade'); 

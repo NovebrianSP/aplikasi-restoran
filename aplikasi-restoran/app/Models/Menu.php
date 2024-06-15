@@ -11,7 +11,7 @@ class Menu extends Model
 {
     use HasFactory;
     protected $primaryKey ='id_menu';
-    protected $fillable = ['nama_menu', 'harga_menu', 'deskripsi'];
+    protected $fillable = ['nama_menu', 'harga_menu', 'deskripsi','gambar'];
 
     public function promos():HasMany
     {

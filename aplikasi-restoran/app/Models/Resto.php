@@ -12,7 +12,8 @@ class Resto extends Model
     protected $primaryKey = 'id_resto';
     protected $fillable = [
         'nama_resto',
-        'alamat'
+        'alamat',
+        'gambar'
     ];
 
     public function pesanans()

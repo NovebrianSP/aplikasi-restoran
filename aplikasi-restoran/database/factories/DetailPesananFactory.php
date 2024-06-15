@@ -20,7 +20,8 @@ class DetailPesananFactory extends Factory
     {
         return [
             'id_menu' => Menu::factory(),
-            'id_pelanggan' => Pelanggan::factory()
+            'id_pelanggan' => Pelanggan::factory(),
+            'jumlah' => fake()->numberBetween(0, 20)
         ];
     }
 }

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('id_pelayan');
             $table->string('nama_pelayan');
             $table->string('kontak_pelayan');
+            $table->text('gambar')->nullable();
             $table->timestamps();
         });
     }

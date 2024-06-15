@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('id_kasir');
             $table->string('nama_kasir');
             $table->string('kontak_kasir');
+            $table->text('gambar')->nullable();
             $table->timestamps();
         });
     }
