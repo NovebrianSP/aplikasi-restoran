@@ -14,6 +14,7 @@ class Kasir extends Model
     protected $fillable = [
         'nama_kasir',
         'kontak_kasir',
+        'gambar'
     ];
 
     public function pesanans()

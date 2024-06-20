@@ -9,7 +9,7 @@ class Pelanggan extends Model
 {
     use HasFactory;
     protected $primaryKey = 'id_pelanggan';
-    protected $fillable = ['nama', 'email', 'no_telepon', 'password', 'alamat'];
+    protected $fillable = ['nama', 'email', 'no_telepon', 'password', 'alamat','gambar'];
 
     public function pesanans()
     {

@@ -10,7 +10,7 @@ class Kategori extends Model
 {
     use HasFactory;
     protected $primaryKey = 'id_kategori';
-    protected $fillable = ['nama_kategori'];
+    protected $fillable = ['nama_kategori','gambar'];
 
     public function menus():HasMany
     {

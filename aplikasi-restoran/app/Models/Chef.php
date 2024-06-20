@@ -14,6 +14,7 @@ class Chef extends Model
     protected $fillable = [
         'nama_chef',
         'kontak_chef',
+        'gambar'
     ];
 
     public function pesanans()
